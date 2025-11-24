@@ -1,0 +1,85 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.3.2/schema.json",
+	"files": {
+		"includes": [
+			"**/*.ts",
+			"**/*.tsx",
+			"**/*.json",
+			"**/*.jsonc",
+			"!**/dist/",
+			"!**/node_modules/",
+			"!**/bun.lock",
+			"!**/worker-configuration.d.ts",
+			"!**/.wrangler/"
+		]
+	},
+	"formatter": {
+		"enabled": true,
+
+		"attributePosition": "multiline",
+		"indentStyle": "tab",
+		"indentWidth": 4,
+		"lineEnding": "lf",
+		"lineWidth": 90
+	},
+	"javascript": {
+		"formatter": {
+			"enabled": true,
+
+			"arrowParentheses": "always",
+			"bracketSameLine": true,
+			"bracketSpacing": true,
+			"jsxQuoteStyle": "single",
+			"quoteStyle": "single",
+			"semicolons": "always",
+			"trailingCommas": "all"
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+
+			"a11y": {},
+			"complexity": {},
+			"correctness": {},
+			"nursery": {
+				"useSortedClasses": {
+					"fix": "safe",
+					"level": "warn",
+					"options": {}
+				}
+			},
+			"performance": {},
+			"security": {},
+			"style": {
+				"noDefaultExport": "off",
+				"useArrayLiterals": "off",
+				"useBlockStatements": "off",
+				"useConsistentArrayType": {
+					"level": "warn",
+					"options": {
+						"syntax": "generic"
+					}
+				},
+				"useFilenamingConvention": "off",
+				"useNamingConvention": "off"
+			},
+			"suspicious": {
+				"noArrayIndexKey": "off"
+			}
+		}
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
+	"vcs": {
+		"clientKind": "git",
+		"defaultBranch": "main",
+		"enabled": true
+	}
+}

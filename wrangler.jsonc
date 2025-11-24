@@ -1,0 +1,49 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "sherlock",
+	"main": "src/index.tsx",
+	"compatibility_date": "2025-11-01",
+	"containers": [
+		{
+			"class_name": "Sherlock",
+			"image": "./container/Dockerfile",
+			"instance_type": "standard-2",
+			"max_instances": 5
+		}
+	],
+	"durable_objects": {
+		"bindings": [
+			{
+				"class_name": "Sherlock",
+				"name": "SHERLOCK"
+			}
+		]
+	},
+	"kv_namespaces": [
+		{
+			"binding": "USERNAME_CACHE",
+			"id": "dbb51baa045d44e6a17b3adc43e371ac"
+		}
+	],
+	"migrations": [
+		{
+			"new_sqlite_classes": ["Sherlock"],
+			"tag": "v1"
+		}
+	],
+	"observability": {
+		"enabled": true,
+		"logs": {
+			"enabled": true
+		},
+		"traces": {
+			"enabled": true
+		}
+	},
+	"routes": [
+		{
+			"custom_domain": true,
+			"pattern": "sherlock.nuro.dev"
+		}
+	]
+}
