@@ -2,7 +2,7 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "sherlock",
 	"main": "src/index.tsx",
-	"compatibility_date": "2025-11-01",
+	"compatibility_date": "2025-11-09",
 	"containers": [
 		{
 			"class_name": "Sherlock",
