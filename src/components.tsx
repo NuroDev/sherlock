@@ -88,7 +88,6 @@ export const FormPage: FC = () => (
 			</div>
 
 			<form
-				autocomplete='off'
 				class='w-full'
 				id='searchForm'>
 				<div class='flex w-full flex-col gap-4 sm:flex-row sm:gap-0'>
@@ -100,7 +99,7 @@ export const FormPage: FC = () => (
 						pattern='[a-zA-Z0-9_.-]+'
 						placeholder='Username'
 						required={true}
-						type='text'
+						type='search'
 					/>
 					<button
 						class='inline-flex w-full items-center justify-center gap-2 border-blue-700 border-y border-r bg-blue-600 px-4 py-1.5 font-semibold text-white transition duration-300 ease-in-out hover:border-blue-800 hover:bg-blue-700 hover:shadow-lg focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white disabled:cursor-wait disabled:opacity-50 sm:w-28 sm:text-sm/6'
