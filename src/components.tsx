@@ -88,10 +88,12 @@ export const FormPage: FC = () => (
 			</div>
 
 			<form
+				autocomplete='off'
 				class='w-full'
 				id='searchForm'>
 				<div class='flex w-full flex-col gap-4 sm:flex-row sm:gap-0'>
 					<input
+						autocomplete='off'
 						class='block w-full grow border-zinc-300 border-y border-l bg-zinc-50 px-4 py-1.5 text-zinc-900 placeholder-zinc-400 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100'
 						id='username'
 						name='username'
